@@ -29,7 +29,14 @@ export default function Home() {
     <div className="flex flex-col gap-16">
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center justify-center text-white">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-purple-900 opacity-90 z-0" />
+        <Image
+          src="/banner.jpg"
+          alt="JRC Banner"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/60 z-0" />
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 prose prose-invert">
           <h1 className="mb-6">Welcome to Jakarta Rock Center</h1>
           <p className="text-xl md:text-2xl mb-8">
