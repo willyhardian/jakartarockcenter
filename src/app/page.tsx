@@ -1,103 +1,126 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  // Placeholder news data - will be replaced with MongoDB data later
+  const latestNews = [
+    {
+      id: 1,
+      title: "Christmas Service Schedule",
+      excerpt: "Join us for our special Christmas services...",
+      date: "2023-12-20",
+    },
+    {
+      id: 2,
+      title: "Youth Camp Registration Open",
+      excerpt: "Register now for our annual youth camp...",
+      date: "2023-12-18",
+    },
+    {
+      id: 3,
+      title: "New Worship Album Release",
+      excerpt: "Our worship team is releasing a new album...",
+      date: "2023-12-15",
+    },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <div className="flex flex-col gap-16">
+      {/* Hero Section */}
+      <section className="relative h-[90vh] flex items-center justify-center text-white">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-purple-900 opacity-90 z-0" />
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-4 prose prose-invert">
+          <h1 className="mb-6">Welcome to Jakarta Rock Center</h1>
+          <p className="text-xl md:text-2xl mb-8">
+            Experience the transforming power of worship and community
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center not-prose">
+            <Link
+              href="/small-groups"
+              className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors"
+            >
+              Join a Small Group
+            </Link>
+            <Link
+              href="/events"
+              className="bg-transparent border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors"
+            >
+              View Events
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Who We Are Section */}
+      <section className="max-w-4xl mx-auto px-4 py-16 prose">
+        <h2 className="text-center">Who We Are</h2>
+        <p className="text-center">
+          Jakarta Rock Center is a vibrant, contemporary Christian church
+          committed to helping people experience God's love and discover their
+          purpose. We believe in authentic worship, meaningful relationships,
+          and making a positive impact in our community.
+        </p>
+        <div className="text-center not-prose">
+          <Link
+            href="/about"
+            className="text-blue-600 hover:text-blue-800 font-semibold"
+          >
+            Learn More About Us →
+          </Link>
+        </div>
+      </section>
+
+      {/* Latest News Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-6xl mx-auto px-4 prose">
+          <h2 className="text-center">Latest News</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 not-prose">
+            {latestNews.map((news) => (
+              <div
+                key={news.id}
+                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+              >
+                <div className="p-6">
+                  <p className="text-sm text-gray-500 mb-2">{news.date}</p>
+                  <h3 className="text-xl font-semibold mb-2">{news.title}</h3>
+                  <p className="text-gray-600 mb-4">{news.excerpt}</p>
+                  <Link
+                    href={`/news/${news.id}`}
+                    className="text-blue-600 hover:text-blue-800 font-medium"
+                  >
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-8 not-prose">
+            <Link
+              href="/news"
+              className="text-blue-600 hover:text-blue-800 font-semibold"
+            >
+              View All News →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Kings Word Preview */}
+      <section className="max-w-4xl mx-auto px-4 py-16 prose text-center">
+        <h2>King's Word</h2>
+        <p>
+          Daily devotionals and reflections to help you grow in your faith
+          journey.
+        </p>
+        <div className="not-prose">
+          <Link
+            href="/kings-word"
+            className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors inline-block"
+          >
+            Read Today's Reflection
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }
