@@ -6,21 +6,22 @@ export default function Home() {
   const latestNews = [
     {
       id: 1,
-      title: "Christmas Service Schedule",
-      excerpt: "Join us for our special Christmas services...",
-      date: "2023-12-20",
+      title: "Pursuing Holiness",
+      excerpt:
+        "Join us this month as we explore the theme of pursuing holiness...",
+      date: "2024-01-20",
     },
     {
       id: 2,
       title: "Youth Camp Registration Open",
       excerpt: "Register now for our annual youth camp...",
-      date: "2023-12-18",
+      date: "2024-01-18",
     },
     {
       id: 3,
       title: "New Worship Album Release",
       excerpt: "Our worship team is releasing a new album...",
-      date: "2023-12-15",
+      date: "2024-01-15",
     },
   ];
 
@@ -32,7 +33,7 @@ export default function Home() {
         <div className="relative z-10 text-center max-w-4xl mx-auto px-4 prose prose-invert">
           <h1 className="mb-6">Welcome to Jakarta Rock Center</h1>
           <p className="text-xl md:text-2xl mb-8">
-            Experience the transforming power of worship and community
+            We help you to fulfill your destiny
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center not-prose">
             <Link
@@ -43,7 +44,7 @@ export default function Home() {
             </Link>
             <Link
               href="/events"
-              className="bg-transparent border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors"
+              className="bg-transparent border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors text-white"
             >
               View Events
             </Link>
@@ -51,22 +52,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Who We Are Section */}
+      {/* Our Pastors Section */}
       <section className="max-w-4xl mx-auto px-4 py-16 prose">
-        <h2 className="text-center">Who We Are</h2>
-        <p className="text-center">
-          Jakarta Rock Center is a vibrant, contemporary Christian church
-          committed to helping people experience God's love and discover their
-          purpose. We believe in authentic worship, meaningful relationships,
-          and making a positive impact in our community.
-        </p>
-        <div className="text-center not-prose">
-          <Link
-            href="/about"
-            className="text-blue-600 hover:text-blue-800 font-semibold"
-          >
-            Learn More About Us →
-          </Link>
+        <h2 className="text-center">Our Senior Pastors</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 not-prose">
+          <div className="text-center">
+            <div className="relative w-64 h-64 mx-auto mb-4 overflow-hidden rounded-full">
+              <Image
+                src="/rds.jpg"
+                alt="Pdt. Dr. Ronny Daud Simeon"
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            <h3 className="text-xl font-semibold">
+              Pdt. Dr. Ronny Daud Simeon
+            </h3>
+          </div>
+          <div className="text-center">
+            <div className="relative w-64 h-64 mx-auto mb-4 overflow-hidden rounded-full">
+              <Image
+                src="/nancy.jpg"
+                alt="Pdm. Nancy Limantono M. TH"
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            <h3 className="text-xl font-semibold">
+              Pdm. Nancy Limantono M. TH
+            </h3>
+          </div>
+        </div>
+      </section>
+
+      {/* Schedule and Location Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-4xl mx-auto px-4  text-center">
+          <h2>Join Our Services</h2>
+          <div className="not-prose bg-white p-8 rounded-lg shadow-md">
+            <h3 className="text-2xl font-bold mb-4">
+              Kingdom Celebration & Rocky
+            </h3>
+            <p className="text-xl mb-2">Every Sunday</p>
+            <p className="text-lg mb-2">
+              📍 5th Floor, Rajawali Place (Samping St. Regis Kuningan)
+            </p>
+            <p className="text-xl font-semibold">🕚 11.00 WIB</p>
+          </div>
         </div>
       </section>
 
