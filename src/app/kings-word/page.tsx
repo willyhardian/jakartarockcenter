@@ -3,7 +3,7 @@ import clientPromise from "@/lib/mongodb";
 import { KingsWord } from "@/models/schemas";
 
 export const metadata: Metadata = {
-  title: "King's Word | Jakarta Rock Center",
+  title: "King&apos;s Word | Jakarta Rock Center",
   description:
     "Daily devotionals and reflections to help you grow in your faith",
 };
@@ -32,7 +32,7 @@ export default async function KingsWordPage() {
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8 text-center">King's Word</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center">King&apos;s Word</h1>
       <p className="text-xl text-gray-600 text-center mb-12">
         Daily devotionals and reflections to help you grow in your faith journey
       </p>

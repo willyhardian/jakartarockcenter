@@ -42,7 +42,7 @@ const Footer = () => {
                   href="/kings-word"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  King's Word
+                  King&apos;s Word
                 </Link>
               </li>
               <li>
@@ -60,7 +60,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Service Times</h3>
             <ul className="space-y-2 text-gray-300">
-              <li>Kingdom Celebration & Rocky : Every Sunday</li>
+              <li>Kingdom Celebration &amp; Rocky : Every Sunday</li>
               <li>5th Floor, Rajawali Place (Samping St. Regis Kuningan)</li>
               <li>11.00 WIB</li>
             </ul>

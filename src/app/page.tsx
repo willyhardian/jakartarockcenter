@@ -146,7 +146,7 @@ export default function Home() {
 
       {/* Kings Word Preview */}
       <section className="max-w-4xl mx-auto px-4 py-16 prose text-center">
-        <h2>King's Word</h2>
+        <h2>King&apos;s Word</h2>
         <p>
           Daily devotionals and reflections to help you grow in your faith
           journey.
@@ -156,7 +156,7 @@ export default function Home() {
             href="/kings-word"
             className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-colors inline-block"
           >
-            Read Today's Reflection
+            Read Today&apos;s Reflection
           </Link>
         </div>
       </section>

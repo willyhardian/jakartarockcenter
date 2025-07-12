@@ -81,7 +81,7 @@ export default async function SmallGroupsPage() {
       <div className="mt-16 bg-gray-50 rounded-lg p-8 text-center">
         <h2 className="text-2xl font-bold mb-4">Start a New Group</h2>
         <p className="text-gray-600 mb-6">
-          Feel called to lead a small group? We'd love to help you get started!
+          Feel called to lead a small group? We&apos;d love to help you get started!
         </p>
         <a
           href="/contact"
